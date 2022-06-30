@@ -1,15 +1,12 @@
     DROP TABLE student;
     CREATE TABLE student (
-        student_id INT,
+        student_id INT AUTO_INCREMENT,
         name VARCHAR (20),
-        major VARCHAR (20) DEFAULT 'undecided',
+        major VARCHAR (20),
         PRIMARY KEY (student_id)
     );
 
     SELECT * FROM student;
     
-    INSERT INTO student (student_id, name) VALUES(1, 'Jack');
-    INSERT INTO student VALUES(2, 'Kate', 'Sociology');
-    INSERT INTO student VALUES(3, NULL, 'Chemistry');
-    INSERT INTO student VALUES(4, 'Jack', 'Biology');
-    INSERT INTO student VALUES(5, 'Mike', 'Computer Science');
+    INSERT INTO student (name, major) VALUES('Jack', 'Biology');
+    INSERT INTO student (name, major) VALUES('Kate', 'Sociology');
