@@ -1,0 +1,11 @@
+SELECT 
+    author, 
+    COUNT(name) AS name_cnt
+FROM
+    books
+GROUP BY 
+    author
+HAVING 
+    COUNT(name) > 1 
+ORDER BY 
+    name_cnt DESC; 
